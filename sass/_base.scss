@@ -1,3 +1,8 @@
+:root {
+  --line-empty-border: #c6c6c6;
+  --line-color-border: #3498db;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,7 +47,17 @@ body {
 }
 
 .circle {
+  background-color: rgb(116, 241, 124);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-empty-border);
+
   &-active {
+    border-color: #3498db;
   }
 }
 
@@ -68,4 +83,28 @@ body {
   //   transform: translateY(50%);
   z-index: -1;
   transition: all 0.4s ease;
+}
+
+.btn {
+  background-color: var(--line-color-border);
+  border-radius: 6px;
+  padding: 0.8rem 3rem;
+  margin: 0.5rem;
+  border: 0;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn-disable {
+  background-color: var(--line-empty-border);
+  cursor: not-allowed;
 }
