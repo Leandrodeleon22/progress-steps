@@ -18,7 +18,6 @@ next.addEventListener("click", function () {
     next.classList.add("btn-disable");
   }
   update();
-  console.log(currentActive);
 });
 
 prev.addEventListener("click", function () {
@@ -36,7 +35,6 @@ prev.addEventListener("click", function () {
     prev.classList.add("btn-disable");
   }
   update();
-  console.log(currentActive);
 });
 
 const update = function () {
@@ -44,4 +42,5 @@ const update = function () {
     circle.classList.remove("circle-active");
   });
   circles[currentActive - 1].classList.add("circle-active");
+  progress.style.width = (currentActive - 1) * 33 + "%";
 };
