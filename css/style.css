@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  display: flex;
+  height: 100vh;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0; }
+
+.container {
+  text-align: center; }
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  width: 35rem;
+  max-width: 100%;
+  position: relative; }
+
+.progress-container::before {
+  content: "";
+  background-color: #e0e0e0;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1; }
+
+.progress {
+  background-color: #3498db;
+  height: 4px;
+  width: 0%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s ease; }
